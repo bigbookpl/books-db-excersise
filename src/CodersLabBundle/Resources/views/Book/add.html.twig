@@ -1,0 +1,22 @@
+<html>
+    <body>
+
+        <form action="{{ url('book_create') }}" method="post">
+
+            <p>Author:</p>
+            <select name="author_id">
+                {% for author in authors %}
+                <option value="{{ author.id }}">{{ author.name }}</option>
+                {% endfor %}
+            </select>
+            <p>Title:</p>
+            <input type="text" name="title">
+            <p>Rating:</p>
+            <input type="text" name="rating">
+
+            <input type="submit">
+
+        </form>
+
+    </body>
+</html>

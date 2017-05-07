@@ -1,0 +1,16 @@
+<html>
+    <body>
+
+    <h1>Lista książek</h1>
+
+    <table>
+        {% for book in books %}
+        <tr>
+            <td>{{ book.title }}</td>
+            <td><a href="{{ url('book_show', {'id': book.id}) }}">szczegóły</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    </body>
+</html>

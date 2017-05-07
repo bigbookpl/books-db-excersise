@@ -1,0 +1,41 @@
+<html>
+<head>
+    <style>
+        td {
+            padding: 5px;
+            border: solid 1px black;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Szczegóły autora</h1>
+
+<table>
+
+    <table>
+        <tr>
+            <td>Name</td>
+            <td>{{ author.name }}</td>
+        </tr>
+        <tr>
+            <td>Description</td>
+            <td><{{ author.description }}/td>
+        </tr>
+        <tr>
+            <td>Książki: {{ author.books.count }} szt.</td>
+            <td>
+                <ul>
+                    {% for book in author.books %}
+                    <li>{{ book.title }} <a href="{{ url('book_show', {'id': book.id}) }}">pokaż</a></li>
+                    {% endfor %}
+                </ul>
+
+            </td>
+        </tr>
+    </table>
+
+</table>
+
+</body>
+</html>

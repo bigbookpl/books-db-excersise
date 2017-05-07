@@ -1,0 +1,26 @@
+<html>
+<body>
+
+<h1>Szczegóły książki</h1>
+
+<table>
+
+    <table>
+        <tr>
+            <td>Tytuł</td>
+            <td>{{ book.title }}</td>
+        </tr>
+        <tr>
+            <td>Autor</td>
+            <td>{{ book.author.name }} <a href="{{ url('author_show', {'id': book.author.id}) }}">pokaż informacje o autorze</a></td>
+        </tr>
+        <tr>
+            <td>Rating</td>
+            <td>{{ book.rating }}</td>
+        </tr>
+    </table>
+
+</table>
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+<html>
+    <body>
+
+    <h1>Lista autorów</h1>
+
+    <table>
+        {% for author in authors %}
+        <tr>
+            <td>{{ author.name }}</td>
+            <td><a href="{{ url('author_show', {'id': author.id}) }}">szczegóły</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    </body>
+</html>
